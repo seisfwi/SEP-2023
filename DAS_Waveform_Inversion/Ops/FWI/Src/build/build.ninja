@@ -1,0 +1,40 @@
+ninja_required_version = 1.3
+cxx = c++
+nvcc = /share/software/user/open/cuda/12.1.1/bin/nvcc
+
+cflags = -DTORCH_EXTENSION_NAME=fwi -DTORCH_API_INCLUDE_EXTENSION_H -DPYBIND11_COMPILER_TYPE=\"_gcc\" -DPYBIND11_STDLIB=\"_libstdcpp\" -DPYBIND11_BUILD_ABI=\"_cxxabi1011\" -I/usr/local/cuda/include -I/home/users/haipeng/TorchFWI/Ops/FWI/Src/rapidjson -isystem /share/software/user/open/py-pytorch/1.8.1_py39/lib/python3.9/site-packages/torch/include -isystem /share/software/user/open/py-pytorch/1.8.1_py39/lib/python3.9/site-packages/torch/include/torch/csrc/api/include -isystem /share/software/user/open/py-pytorch/1.8.1_py39/lib/python3.9/site-packages/torch/include/TH -isystem /share/software/user/open/py-pytorch/1.8.1_py39/lib/python3.9/site-packages/torch/include/THC -isystem /share/software/user/open/cuda/12.1.1/include -isystem /home/groups/biondo/haipeng/software/anaconda3/include/python3.9 -D_GLIBCXX_USE_CXX11_ABI=0 -fPIC -std=c++14 -O3 -fopenmp -lpthread
+post_cflags = 
+cuda_cflags = -ccbin gcc -DTORCH_EXTENSION_NAME=fwi -DTORCH_API_INCLUDE_EXTENSION_H -DPYBIND11_COMPILER_TYPE=\"_gcc\" -DPYBIND11_STDLIB=\"_libstdcpp\" -DPYBIND11_BUILD_ABI=\"_cxxabi1011\" -I/usr/local/cuda/include -I/home/users/haipeng/TorchFWI/Ops/FWI/Src/rapidjson -isystem /share/software/user/open/py-pytorch/1.8.1_py39/lib/python3.9/site-packages/torch/include -isystem /share/software/user/open/py-pytorch/1.8.1_py39/lib/python3.9/site-packages/torch/include/torch/csrc/api/include -isystem /share/software/user/open/py-pytorch/1.8.1_py39/lib/python3.9/site-packages/torch/include/TH -isystem /share/software/user/open/py-pytorch/1.8.1_py39/lib/python3.9/site-packages/torch/include/THC -isystem /share/software/user/open/cuda/12.1.1/include -isystem /home/groups/biondo/haipeng/software/anaconda3/include/python3.9 -D_GLIBCXX_USE_CXX11_ABI=0 -D__CUDA_NO_HALF_OPERATORS__ -D__CUDA_NO_HALF_CONVERSIONS__ -D__CUDA_NO_BFLOAT16_CONVERSIONS__ -D__CUDA_NO_HALF2_OPERATORS__ --expt-relaxed-constexpr -gencode=arch=compute_80,code=compute_80 -gencode=arch=compute_80,code=sm_80 --compiler-options '-fPIC' -std=c++14
+cuda_post_cflags = 
+ldflags = -shared -L/usr/local/cuda/lib64 -lnvrtc -lcuda -lcudart -lcufft -L/share/software/user/open/py-pytorch/1.8.1_py39/lib/python3.9/site-packages/torch/lib -lc10 -lc10_cuda -ltorch_cpu -ltorch_cuda_cu -ltorch_cuda_cpp -ltorch -ltorch_python -L/share/software/user/open/cuda/12.1.1/lib64 -lcudart
+
+rule compile
+  command = $cxx -MMD -MF $out.d $cflags -c $in -o $out $post_cflags
+  depfile = $out.d
+  deps = gcc
+
+rule cuda_compile
+  depfile = $out.d
+  deps = gcc
+  command = $nvcc --generate-dependencies-with-compile --dependency-output $out.d $cuda_cflags -c $in -o $out $cuda_post_cflags
+
+rule link
+  command = $cxx $in $ldflags -o $out
+
+build Torch_Fwi.o: compile /home/users/haipeng/TorchFWI/Ops/FWI/Src/Torch_Fwi.cpp
+build Parameter.o: compile /home/users/haipeng/TorchFWI/Ops/FWI/Src/Parameter.cpp
+build libCUFD.cuda.o: cuda_compile /home/users/haipeng/TorchFWI/Ops/FWI/Src/libCUFD.cu
+build el_stress.cuda.o: cuda_compile /home/users/haipeng/TorchFWI/Ops/FWI/Src/el_stress.cu
+build el_velocity.cuda.o: cuda_compile /home/users/haipeng/TorchFWI/Ops/FWI/Src/el_velocity.cu
+build el_stress_adj.cuda.o: cuda_compile /home/users/haipeng/TorchFWI/Ops/FWI/Src/el_stress_adj.cu
+build el_velocity_adj.cuda.o: cuda_compile /home/users/haipeng/TorchFWI/Ops/FWI/Src/el_velocity_adj.cu
+build Model.cuda.o: cuda_compile /home/users/haipeng/TorchFWI/Ops/FWI/Src/Model.cu
+build Cpml.cuda.o: cuda_compile /home/users/haipeng/TorchFWI/Ops/FWI/Src/Cpml.cu
+build utilities.cuda.o: cuda_compile /home/users/haipeng/TorchFWI/Ops/FWI/Src/utilities.cu
+build Src_Rec.cuda.o: cuda_compile /home/users/haipeng/TorchFWI/Ops/FWI/Src/Src_Rec.cu
+build Boundary.cuda.o: cuda_compile /home/users/haipeng/TorchFWI/Ops/FWI/Src/Boundary.cu
+
+build fwi.so: link Torch_Fwi.o Parameter.o libCUFD.cuda.o el_stress.cuda.o el_velocity.cuda.o el_stress_adj.cuda.o el_velocity_adj.cuda.o Model.cuda.o Cpml.cuda.o utilities.cuda.o Src_Rec.cuda.o Boundary.cuda.o
+
+default fwi.so
+

@@ -1,0 +1,92 @@
+[
+{
+  "directory": "/homes/sep/haipeng/develop/TorchFWI/build",
+  "command": "/usr/bin/c++ -DCUFD_EXPORTS -I/homes/sep/haipeng/develop/TorchFWI/Ops/FWI/Src/rapidjson -I/usr/local/cuda/include -std=gnu++11 -O3 -g -fPIC -std=gnu++11 -o CMakeFiles/CUFD.dir/Parameter.cpp.o -c /homes/sep/haipeng/develop/TorchFWI/Ops/FWI/Src/Parameter.cpp",
+  "file": "/homes/sep/haipeng/develop/TorchFWI/Ops/FWI/Src/Parameter.cpp"
+},
+{
+  "directory": "/homes/sep/haipeng/develop/TorchFWI/build",
+  "command": "/usr/local/cuda-11.4/bin/nvcc -forward-unknown-to-host-compiler -DCUFD_EXPORTS -I/homes/sep/haipeng/develop/TorchFWI/Ops/FWI/Src/rapidjson -I/usr/local/cuda/include -g -Xcompiler=-fPIC -std=c++11 -x cu -c /homes/sep/haipeng/develop/TorchFWI/Ops/FWI/Src/libCUFD.cu -o CMakeFiles/CUFD.dir/libCUFD.cu.o",
+  "file": "/homes/sep/haipeng/develop/TorchFWI/Ops/FWI/Src/libCUFD.cu"
+},
+{
+  "directory": "/homes/sep/haipeng/develop/TorchFWI/build",
+  "command": "/usr/local/cuda-11.4/bin/nvcc -forward-unknown-to-host-compiler -DCUFD_EXPORTS -I/homes/sep/haipeng/develop/TorchFWI/Ops/FWI/Src/rapidjson -I/usr/local/cuda/include -g -Xcompiler=-fPIC -std=c++11 -x cu -c /homes/sep/haipeng/develop/TorchFWI/Ops/FWI/Src/el_stress.cu -o CMakeFiles/CUFD.dir/el_stress.cu.o",
+  "file": "/homes/sep/haipeng/develop/TorchFWI/Ops/FWI/Src/el_stress.cu"
+},
+{
+  "directory": "/homes/sep/haipeng/develop/TorchFWI/build",
+  "command": "/usr/local/cuda-11.4/bin/nvcc -forward-unknown-to-host-compiler -DCUFD_EXPORTS -I/homes/sep/haipeng/develop/TorchFWI/Ops/FWI/Src/rapidjson -I/usr/local/cuda/include -g -Xcompiler=-fPIC -std=c++11 -x cu -c /homes/sep/haipeng/develop/TorchFWI/Ops/FWI/Src/el_velocity.cu -o CMakeFiles/CUFD.dir/el_velocity.cu.o",
+  "file": "/homes/sep/haipeng/develop/TorchFWI/Ops/FWI/Src/el_velocity.cu"
+},
+{
+  "directory": "/homes/sep/haipeng/develop/TorchFWI/build",
+  "command": "/usr/local/cuda-11.4/bin/nvcc -forward-unknown-to-host-compiler -DCUFD_EXPORTS -I/homes/sep/haipeng/develop/TorchFWI/Ops/FWI/Src/rapidjson -I/usr/local/cuda/include -g -Xcompiler=-fPIC -std=c++11 -x cu -c /homes/sep/haipeng/develop/TorchFWI/Ops/FWI/Src/ac_pressure.cu -o CMakeFiles/CUFD.dir/ac_pressure.cu.o",
+  "file": "/homes/sep/haipeng/develop/TorchFWI/Ops/FWI/Src/ac_pressure.cu"
+},
+{
+  "directory": "/homes/sep/haipeng/develop/TorchFWI/build",
+  "command": "/usr/local/cuda-11.4/bin/nvcc -forward-unknown-to-host-compiler -DCUFD_EXPORTS -I/homes/sep/haipeng/develop/TorchFWI/Ops/FWI/Src/rapidjson -I/usr/local/cuda/include -g -Xcompiler=-fPIC -std=c++11 -x cu -c /homes/sep/haipeng/develop/TorchFWI/Ops/FWI/Src/ac_velocity.cu -o CMakeFiles/CUFD.dir/ac_velocity.cu.o",
+  "file": "/homes/sep/haipeng/develop/TorchFWI/Ops/FWI/Src/ac_velocity.cu"
+},
+{
+  "directory": "/homes/sep/haipeng/develop/TorchFWI/build",
+  "command": "/usr/local/cuda-11.4/bin/nvcc -forward-unknown-to-host-compiler -DCUFD_EXPORTS -I/homes/sep/haipeng/develop/TorchFWI/Ops/FWI/Src/rapidjson -I/usr/local/cuda/include -g -Xcompiler=-fPIC -std=c++11 -x cu -c /homes/sep/haipeng/develop/TorchFWI/Ops/FWI/Src/Model.cu -o CMakeFiles/CUFD.dir/Model.cu.o",
+  "file": "/homes/sep/haipeng/develop/TorchFWI/Ops/FWI/Src/Model.cu"
+},
+{
+  "directory": "/homes/sep/haipeng/develop/TorchFWI/build",
+  "command": "/usr/local/cuda-11.4/bin/nvcc -forward-unknown-to-host-compiler -DCUFD_EXPORTS -I/homes/sep/haipeng/develop/TorchFWI/Ops/FWI/Src/rapidjson -I/usr/local/cuda/include -g -Xcompiler=-fPIC -std=c++11 -x cu -c /homes/sep/haipeng/develop/TorchFWI/Ops/FWI/Src/Cpml.cu -o CMakeFiles/CUFD.dir/Cpml.cu.o",
+  "file": "/homes/sep/haipeng/develop/TorchFWI/Ops/FWI/Src/Cpml.cu"
+},
+{
+  "directory": "/homes/sep/haipeng/develop/TorchFWI/build",
+  "command": "/usr/local/cuda-11.4/bin/nvcc -forward-unknown-to-host-compiler -DCUFD_EXPORTS -I/homes/sep/haipeng/develop/TorchFWI/Ops/FWI/Src/rapidjson -I/usr/local/cuda/include -g -Xcompiler=-fPIC -std=c++11 -x cu -c /homes/sep/haipeng/develop/TorchFWI/Ops/FWI/Src/utilities.cu -o CMakeFiles/CUFD.dir/utilities.cu.o",
+  "file": "/homes/sep/haipeng/develop/TorchFWI/Ops/FWI/Src/utilities.cu"
+},
+{
+  "directory": "/homes/sep/haipeng/develop/TorchFWI/build",
+  "command": "/usr/local/cuda-11.4/bin/nvcc -forward-unknown-to-host-compiler -DCUFD_EXPORTS -I/homes/sep/haipeng/develop/TorchFWI/Ops/FWI/Src/rapidjson -I/usr/local/cuda/include -g -Xcompiler=-fPIC -std=c++11 -x cu -c /homes/sep/haipeng/develop/TorchFWI/Ops/FWI/Src/Src_Rec.cu -o CMakeFiles/CUFD.dir/Src_Rec.cu.o",
+  "file": "/homes/sep/haipeng/develop/TorchFWI/Ops/FWI/Src/Src_Rec.cu"
+},
+{
+  "directory": "/homes/sep/haipeng/develop/TorchFWI/build",
+  "command": "/usr/local/cuda-11.4/bin/nvcc -forward-unknown-to-host-compiler -DCUFD_EXPORTS -I/homes/sep/haipeng/develop/TorchFWI/Ops/FWI/Src/rapidjson -I/usr/local/cuda/include -g -Xcompiler=-fPIC -std=c++11 -x cu -c /homes/sep/haipeng/develop/TorchFWI/Ops/FWI/Src/Boundary.cu -o CMakeFiles/CUFD.dir/Boundary.cu.o",
+  "file": "/homes/sep/haipeng/develop/TorchFWI/Ops/FWI/Src/Boundary.cu"
+},
+{
+  "directory": "/homes/sep/haipeng/develop/TorchFWI/build",
+  "command": "/usr/local/cuda-11.4/bin/nvcc -forward-unknown-to-host-compiler -DCUFD_EXPORTS -I/homes/sep/haipeng/develop/TorchFWI/Ops/FWI/Src/rapidjson -I/usr/local/cuda/include -g -Xcompiler=-fPIC -std=c++11 -x cu -c /homes/sep/haipeng/develop/TorchFWI/Ops/FWI/Src/ac_pressure_adj.cu -o CMakeFiles/CUFD.dir/ac_pressure_adj.cu.o",
+  "file": "/homes/sep/haipeng/develop/TorchFWI/Ops/FWI/Src/ac_pressure_adj.cu"
+},
+{
+  "directory": "/homes/sep/haipeng/develop/TorchFWI/build",
+  "command": "/usr/local/cuda-11.4/bin/nvcc -forward-unknown-to-host-compiler -DCUFD_EXPORTS -I/homes/sep/haipeng/develop/TorchFWI/Ops/FWI/Src/rapidjson -I/usr/local/cuda/include -g -Xcompiler=-fPIC -std=c++11 -x cu -c /homes/sep/haipeng/develop/TorchFWI/Ops/FWI/Src/ac_velocity_adj.cu -o CMakeFiles/CUFD.dir/ac_velocity_adj.cu.o",
+  "file": "/homes/sep/haipeng/develop/TorchFWI/Ops/FWI/Src/ac_velocity_adj.cu"
+},
+{
+  "directory": "/homes/sep/haipeng/develop/TorchFWI/build",
+  "command": "/usr/local/cuda-11.4/bin/nvcc -forward-unknown-to-host-compiler -DCUFD_EXPORTS -I/homes/sep/haipeng/develop/TorchFWI/Ops/FWI/Src/rapidjson -I/usr/local/cuda/include -g -Xcompiler=-fPIC -std=c++11 -x cu -c /homes/sep/haipeng/develop/TorchFWI/Ops/FWI/Src/image_vel.cu -o CMakeFiles/CUFD.dir/image_vel.cu.o",
+  "file": "/homes/sep/haipeng/develop/TorchFWI/Ops/FWI/Src/image_vel.cu"
+},
+{
+  "directory": "/homes/sep/haipeng/develop/TorchFWI/build",
+  "command": "/usr/local/cuda-11.4/bin/nvcc -forward-unknown-to-host-compiler -DCUFD_EXPORTS -I/homes/sep/haipeng/develop/TorchFWI/Ops/FWI/Src/rapidjson -I/usr/local/cuda/include -g -Xcompiler=-fPIC -std=c++11 -x cu -c /homes/sep/haipeng/develop/TorchFWI/Ops/FWI/Src/image_vel_time.cu -o CMakeFiles/CUFD.dir/image_vel_time.cu.o",
+  "file": "/homes/sep/haipeng/develop/TorchFWI/Ops/FWI/Src/image_vel_time.cu"
+},
+{
+  "directory": "/homes/sep/haipeng/develop/TorchFWI/build",
+  "command": "/usr/local/cuda-11.4/bin/nvcc -forward-unknown-to-host-compiler -DCUFD_EXPORTS -I/homes/sep/haipeng/develop/TorchFWI/Ops/FWI/Src/rapidjson -I/usr/local/cuda/include -g -Xcompiler=-fPIC -std=c++11 -x cu -c /homes/sep/haipeng/develop/TorchFWI/Ops/FWI/Src/ac_adj_push.cu -o CMakeFiles/CUFD.dir/ac_adj_push.cu.o",
+  "file": "/homes/sep/haipeng/develop/TorchFWI/Ops/FWI/Src/ac_adj_push.cu"
+},
+{
+  "directory": "/homes/sep/haipeng/develop/TorchFWI/build",
+  "command": "/usr/local/cuda-11.4/bin/nvcc -forward-unknown-to-host-compiler -DCUFD_EXPORTS -I/homes/sep/haipeng/develop/TorchFWI/Ops/FWI/Src/rapidjson -I/usr/local/cuda/include -g -Xcompiler=-fPIC -std=c++11 -x cu -c /homes/sep/haipeng/develop/TorchFWI/Ops/FWI/Src/el_stress_adj.cu -o CMakeFiles/CUFD.dir/el_stress_adj.cu.o",
+  "file": "/homes/sep/haipeng/develop/TorchFWI/Ops/FWI/Src/el_stress_adj.cu"
+},
+{
+  "directory": "/homes/sep/haipeng/develop/TorchFWI/build",
+  "command": "/usr/local/cuda-11.4/bin/nvcc -forward-unknown-to-host-compiler -DCUFD_EXPORTS -I/homes/sep/haipeng/develop/TorchFWI/Ops/FWI/Src/rapidjson -I/usr/local/cuda/include -g -Xcompiler=-fPIC -std=c++11 -x cu -c /homes/sep/haipeng/develop/TorchFWI/Ops/FWI/Src/el_velocity_adj.cu -o CMakeFiles/CUFD.dir/el_velocity_adj.cu.o",
+  "file": "/homes/sep/haipeng/develop/TorchFWI/Ops/FWI/Src/el_velocity_adj.cu"
+}
+]

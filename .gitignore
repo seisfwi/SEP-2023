@@ -388,6 +388,5 @@ Temporary Items
 *.bin
 *.sgy
 *.txt
-*.dat
 *.mat
 *.pyc
