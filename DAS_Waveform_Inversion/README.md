@@ -25,16 +25,16 @@ conda activate torchfwi
 ```bash
 # In some clusters, there are installed modules, one can load them by
 module load cuda/11.3.1    
-
 module load gcc/9.1.0      # the gcc version should be 5.0.0 <= V <= 10.0.0
-
 module load ninja/1.9.0
 ```
 
 If these modules are not installed, one can install them one by one:
 
 **Install gcc**: further refer to https://gcc.gnu.org/install/binaries.html
+
 **Install cuda**: further refer to https://developer.nvidia.com/cuda-toolkit-archive
+
 **Install ninja**: further refer to: https://github.com/ninja-build/ninja/releases
 
 
