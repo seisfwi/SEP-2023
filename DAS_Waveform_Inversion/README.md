@@ -25,7 +25,9 @@ conda activate torchfwi
 ```bash
 # In some clusters, there are installed modules, one can load them by
 module load cuda/11.3.1    
+
 module load gcc/9.1.0      # the gcc version should be 5.0.0 <= V <= 10.0.0
+
 module load ninja/1.9.0
 ```
 
