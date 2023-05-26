@@ -32,7 +32,9 @@ module load ninja/1.9.0
 If these modules are not installed, one can install them one by one:
 
 **Install gcc**: further refer to https://gcc.gnu.org/install/binaries.html
+
 **Install cuda**: further refer to https://developer.nvidia.com/cuda-toolkit-archive
+
 **Install ninja**: further refer to: https://github.com/ninja-build/ninja/releases
 
 
